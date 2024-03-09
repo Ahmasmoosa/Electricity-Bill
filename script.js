@@ -9,15 +9,15 @@ formula = unitConsumed * unitPrice;
 
 
 // UNDER 200 STARTS HERE
-twoHundredC = billValue;
+twoHundredC = billValue - 100;
 twoHundredP = 59;
 twoFormula = twoHundredC * twoHundredP;
 // UNDER 200 ENDS HERE
 
 if (unitConsumed >= 0 && unitConsumed <= 100){
     box.innerHTML = formula;
-}else if (twoHundredC >= 100){
-    box.innerHTML = twoFormula;
+}else if (twoHundredC >= 100 && twoHundredC <= 200){
+    box.innerHTML = (100 * 42) - twoFormula;
 }else{
     box.innerHTML = "You are inserting Wrong Value !!!";
 }
